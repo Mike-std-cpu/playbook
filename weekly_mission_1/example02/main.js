@@ -5,5 +5,3 @@ const logger = require('./logger') // Conexion y le nombre del archvio del cual 
 
 logger.info('This is an informational message')
 logger.verbose('This is a verbose message')
-
-// MIN DEL LIVE 2 dejado 1:21:19
