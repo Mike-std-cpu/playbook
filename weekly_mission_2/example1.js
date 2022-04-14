@@ -17,9 +17,13 @@ const ajoloNauta ={
     mission: "Node JS",
     sayHelloExplorers: function(){
         console.log("Soy un Ajolonauta Explorers, Hey!!!")
+    },
+    tellMeMore: function (){
+        console.log("Mi nombre es: " + this.name); //Aqui usamos la propiedad del objeto, usamos sus atributos que no son publicos
     }
 }
 
 console.log("Ajolonauta: ");
 console.log(ajoloNauta);
 ajoloNauta.sayHelloExplorers(); // Se visualiza en comando o en terminals
+ajoloNauta.tellMeMore();
