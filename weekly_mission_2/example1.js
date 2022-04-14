@@ -11,3 +11,15 @@ const explorer ={ // Objeto
 }
 console.log(explorer);
 console.log(explorer.name);//Accedemos a la propiedad de los objetos con el "ObjectName.atributo"
+
+const ajoloNauta ={
+    name: "Woppa",
+    mission: "Node JS",
+    sayHelloExplorers: function(){
+        console.log("Soy un Ajolonauta Explorers, Hey!!!")
+    }
+}
+
+console.log("Ajolonauta: ");
+console.log(ajoloNauta);
+ajoloNauta.sayHelloExplorers(); // Se visualiza en comando o en terminals
