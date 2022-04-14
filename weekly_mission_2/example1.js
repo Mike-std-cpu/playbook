@@ -1,6 +1,6 @@
 console.log("2.- Creacion de un objeto con atributos");
 
-const myObjet ={
+const explorer ={ // Objeto
     name: "Miguel",
     lastn: "Andrade",
     age: 24,
@@ -9,5 +9,5 @@ const myObjet ={
     //OBJETOS ANIDADOS
     blog: {url: "github.com/mike-std-cpu", post: 5} //Objeto dentro de un objeto = OBJETO ANIDADO
 }
-console.log(myObjet);
-console.log(myObjet.name);//Accedemos a la propiedad de los objetos con el "ObjectName.atributo"
+console.log(explorer);
+console.log(explorer.name);//Accedemos a la propiedad de los objetos con el "ObjectName.atributo"
