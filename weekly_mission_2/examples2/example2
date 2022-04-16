@@ -13,7 +13,7 @@ const explorers = [
         name: "Explorer 2",
         excercises_completed: 5,
         rate: 89,
-        city:"CDMX",
+        city:"EdoMex",
         stack: ["JS", "HTML"],
         mission: "Backend"
 
@@ -22,7 +22,7 @@ const explorers = [
         name: "Explorer 3",
         excercises_completed: 9,
         rate: 50,
-        city:"CDMX",
+        city:"Hidalgo",
         stack: ["JS", "CSS"],
         mission: "Backend"
     }];
@@ -43,8 +43,22 @@ console.log("Ejemplo con MAP");
 const explorers_stack = explorers.map(my_explorer_in_my_list => my_explorer_in_my_list.stack) //Todos los resultados uqe obtenga se ingresaran en la lista eplorers_stack
 console.log(explorers_stack);
 
-//filter
+//FILTER
 console.log("Ejemplo con Filter");
 const explorer_with_js = explorers.filter(my_explorer_in_list => my_explorer_in_list.stack.includes("JS"));
 console.log(explorer_with_js);
 //Filter ayudara a tener un filtro y meterlos en una ueva lista llamada explorer_with_js, ahi ingresara los explorer que tengan js en stack
+
+//FIND
+console.log("Ejemplo con find");
+const first_explorer_in_cdmx = explorers.find(my_explorer_in_list => my_explorer_in_list.city === "CDMX");
+console.log(first_explorer_in_cdmx);
+//Hara un recorrido en los obnjetos y donde encuentre en city exactamente "CDMX" lo agregara a la nueva lista.
+
+//REDUCE
+//Reduce trabaja con un acumulador acc
+console.log("Ejemplo de suma de los rate de los explorers");
+all_excercises_explorers = explorers.reduce((acc, my_explorer_in_list) => acc + my_explorer_in_list.excercises_completed,0)
+                                               // acc se sumara al valor del excercise_completed 
+// Posterior se iran sumando uno por uno para ir actualizando la variable.
+console.log(all_excercises_explorers);
