@@ -1,0 +1,50 @@
+console.log("Ejercicio 2")
+const explorers = [
+    {
+        name: "Explorer 1",
+        excercises_completed: 10,
+        rate: 99,
+        city:"CDMX",
+        stack: ["JS", "C#"],
+        mission: "Backend"
+
+    }, 
+    {
+        name: "Explorer 2",
+        excercises_completed: 5,
+        rate: 89,
+        city:"CDMX",
+        stack: ["JS", "HTML"],
+        mission: "Backend"
+
+    }, 
+    {
+        name: "Explorer 3",
+        excercises_completed: 9,
+        rate: 50,
+        city:"CDMX",
+        stack: ["JS", "CSS"],
+        mission: "Backend"
+    }];
+
+console.log(explorers);
+
+//Imprimir sus NOMBRE
+explorers.forEach(explorer => console.log(explorer.name));
+//for each es un metodo que nos permite recorre luna lista de elementos.
+
+//Imprimir sus STACK
+explorers.forEach(explorer => console.log(explorer.stack));
+
+//MAP
+//Metodo que nos ayuda a crear nuevas cosas
+console.log("Ejemplo con MAP");
+
+const explorers_stack = explorers.map(my_explorer_in_my_list => my_explorer_in_my_list.stack) //Todos los resultados uqe obtenga se ingresaran en la lista eplorers_stack
+console.log(explorers_stack);
+
+//filter
+console.log("Ejemplo con Filter");
+const explorer_with_js = explorers.filter(my_explorer_in_list => my_explorer_in_list.stack.includes("JS"));
+console.log(explorer_with_js);
+//Filter ayudara a tener un filtro y meterlos en una ueva lista llamada explorer_with_js, ahi ingresara los explorer que tengan js en stack
