@@ -12,7 +12,7 @@ class User {
         return  this._userName;
     }
     set setUsername(yourUserName){
-        this._name = yourUserName;
+        this._userName = yourUserName;
     }
     get getId(){
         return this._id;
@@ -40,4 +40,4 @@ class User {
     }
 
 }
-module.exports = User
+module.exports = User;
