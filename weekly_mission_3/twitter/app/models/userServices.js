@@ -9,7 +9,7 @@ Criterios de aceptación:
 const User = require('../../app/models/user')
 
 class UserServices{
-    static create(_id, _userName, _name){
+    static create(_id, _userName, _name){//static nos ayuda ha no crear objetios en la misma clase
         return new User(_id, _userName, _name, "Sin bio")
     }
 
