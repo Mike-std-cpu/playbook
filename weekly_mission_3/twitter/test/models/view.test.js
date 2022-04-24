@@ -11,4 +11,13 @@ describe("Tests para clase vista:", () => {
         
         
     })
+    /*
+    Valida que un `payload` contenga en alguna de las llaves `username`, `name`, o `id` un valor en `null`. Si hay un valor -
+    - `null` regresa un objeto con la llave `error` y que indique el texto: `necesitan tener un valor válido`.
+    */
+    test("2.- Error de objeto con propiedas invalidas:", () => {
+        const payload = {username: null, name: 12, id: null};
+        const result = UserView.createUser(payload);
+        expect(result.error).toMatch(/Necesitamos tener un valor valido/)
+    })
 })
