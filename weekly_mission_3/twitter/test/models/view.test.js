@@ -1,6 +1,11 @@
 const UserView = require('./../../app/models/view');
 
 describe("Tests para clase vista:", () => {
+
+    /*
+    1. Valida que al enviar en el `payload` un valor `null`, obtenga un objeto con la llave `error` y el valor indique 
+    `payload no existe`.
+    */
     test("1.- Error en envio payload: ", () => {
         const payload = null;
         const result = UserView.createUser(payload);
@@ -9,8 +14,8 @@ describe("Tests para clase vista:", () => {
         /* Comparadores como toBe, toEquals para numebrs */
         //DOCUMENTACION JEST :https://jestjs.io/docs/using-matchers#strings
         
-        
     })
+    
     /*
     Valida que un `payload` contenga en alguna de las llaves `username`, `name`, o `id` un valor en `null`. Si hay un valor -
     - `null` regresa un objeto con la llave `error` y que indique el texto: `necesitan tener un valor válido`.
