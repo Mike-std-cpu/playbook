@@ -7,10 +7,11 @@ class View{
     if(payload === null){
       console.log("Error es null")
       return {error: "El payload no existe."}
-    } else if(typeof payload._userName === 'string' && typeof payload._name === 'string' && typeof payload._id === 'number') {
-      return UserServices.create(payload._id, payload._userName, payload._name);
-    } else{
-      return {error: "Necesitamos tener un valor valido"}
+    } 
+    else if(typeof payload._userName === 'string' && typeof payload._name === 'string' && typeof payload._id === 'number') {
+        return UserServices.create(payload._id, payload._userName, payload._name);
+    }else{
+        return {error: "Necesitamos tener un valor valido"}
     }
   }
 }

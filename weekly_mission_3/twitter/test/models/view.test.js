@@ -1,7 +1,7 @@
 const UserView = require('./../../app/models/view');
 
 describe("Tests para clase vista:", () => {
-    test("Error en envio payload: ", () => {
+    test("1.- Error en envio payload: ", () => {
         const payload = null;
         const result = UserView.createUser(payload);
         expect(result.error).toMatch(/El payload no existe/);// toMatch sirve para comparar cadenas
@@ -20,4 +20,14 @@ describe("Tests para clase vista:", () => {
         const result = UserView.createUser(payload);
         expect(result.error).toMatch(/Necesitamos tener un valor valido/)
     })
+
+    /* 
+    Valida que un `payload` con algunas de las propiedades necesarias regrese un objeto con la llave `error` indicando 
+    `necesitan tener un valor válido`.
+    */
+   test("3.- Erro de objeto cundo se omiten parametros: ", () => {
+       const payload = {username:'Mikelolp'};
+       const result = UserView.createUser(payload);
+       expect(result.error).toMatch(/Necesitamos tener un valor valido/);
+   }) 
 })
