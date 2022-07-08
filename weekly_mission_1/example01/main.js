@@ -20,11 +20,11 @@ const myModule = (() => { // Es una funcion con otra sintaxis
  const exported = {// Declaracion de un objeto dentro de una funcion MyModule
    publicFoo: "Valor público, pueden verme desde donde me llamen",
    publicBar: "Otro valor público",
-   	publicBaz: baz
+   	publicBaz: "baz"
  }
 
 // Exposición de variables locales
-return exported // Retornara las variables del objeto Exported
+return exported; // Retornara las variables del objeto Exported
 })()
 
 console.log(myModule); // Solo imprimira lo publico, es decir

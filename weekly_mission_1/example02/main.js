@@ -5,3 +5,8 @@ const logger = require('./logger') // Conexion y le nombre del archvio del cual 
 
 logger.info('This is an informational message')
 logger.verbose('This is a verbose message')
+
+/**
+ *  Podemos deducir que al ejecutar el main, se ejcutara la exportacion de logger, mostrando informacion del mismo -
+    para proseguir con el demas bloques de codigo que se tenga.
+ */
